@@ -1,48 +1,44 @@
 <script setup>
-// import router from '@/router';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useToast } from 'vue-toastification';
 
 const email = ref('');
 const password = ref('');
-const signInError =ref('');
+
 
 const router = useRouter();
+const toast = useToast();
 
 const handleSignIn = () => {
-  const getUser = localStorage.getItem('user')
-  const user = JSON.parse(getUser)
-  console.log(user)
-
-  if(user && email.value === user.email && password.value === user.password) {
-    localStorage.setItem('authenticated', true);
-    
-    console.log('sign in successful')
-    router.push('/dashboard');
-  } else {
-    signInError.value = 'Invalid email or password';
+  const getUser = localStorage.getItem('user');
+  const user = JSON.parse(getUser);
+  if (!email.value || !password.value) {
+    toast.error('Both fields must be filled');
+    // console.log('toast'); // Moved this line inside the if block
     return;
+  } else if (user && email.value === user.email && password.value === user.password) {
+    localStorage.setItem('authenticated', true);
+    toast.success('Login successful');
+    router.push('/home');
+  } else {
+    toast.error('Invalid email or password');
   }
 
   email.value = '';
   password.value = '';
-  signInError.value = '';
-  handleSignIn.value = '';
-
-}
-
+};
 
 </script>
 
 <template>
    <div class="container">
-        <h2>Sign in</h2>
+        <h2>Admin Login</h2>
         <form @submit.prevent="handleSignIn">
           <input v-model="email"  type="email" placeholder="Email" required>
           <input v-model="password"  type="password" placeholder="Password" required>
           <button type="submit">Sign in</button>
         </form>
-        <p v-if="signInError" class="error-message"> {{ signInError }}</p>
     </div>
 </template>
 
@@ -87,10 +83,6 @@ h2 {
     background-color: #2980b9;
   }
   
-.error-message {
-  color: red;
-  margin-top: 10px;
-}
 </style>
 
 

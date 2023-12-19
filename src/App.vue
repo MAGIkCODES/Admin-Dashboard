@@ -1,13 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Dashboard from './views/Dashboard.vue';
-import SignIn from './views/SignIn.vue';
+import Home from './views/Home.vue';
+import Login from './views/Login.vue';
+// import AddNewProduct from './views/AddNewProduct.vue';
 </script>
 
 <template>
   <RouterView />
 </template>
-
-<style scoped>
-
-</style>
