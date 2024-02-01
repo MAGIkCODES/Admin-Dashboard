@@ -58,7 +58,7 @@ h1 {
 
 
 .form-container {
-  width: 80%;
+  max-width: 80%;
   padding: 20px;
   margin: 30px auto;
   background-color: aliceblue;
@@ -106,5 +106,4 @@ input[type='number'] {
 .delete-btn:focus {
   outline: 0;
 }
-
 </style>

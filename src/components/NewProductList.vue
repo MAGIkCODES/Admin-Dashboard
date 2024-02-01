@@ -130,6 +130,14 @@ const saveChangesOfEditedProduct = () => {
 </template>
 
 <style scoped>
+.close {
+ font-size: 20px;
+ font-weight: 600;
+}
+
+.close:hover {
+  color: red;
+}
 
 .all-products {
       color: black;
