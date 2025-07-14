@@ -1,29 +1,32 @@
-# admindashboard
+# Admin Dashboard
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple admin dashboard built with Vue.js. This project includes authentication (signup & login), basic product management (add and delete products), and toast notifications using [Vue Toastification](https://github.com/Maronato/vue-toastification).
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 🔐 User Signup & Login
+- 🧑‍💼 Admin authentication
+- ➕ Add a Product
+- ❌ Delete a Product
+- 🔔 Real-time toast notifications (e.g., success & error messages)
 
-## Customize configuration
+## 🛠 Tech Stack
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Frontend:** Vue.js (Composition API / Options API)
+- **Routing:** Vue Router
+- **State Management:** (Optional) Vuex or Pinia (depending on your setup)
+- **Notifications:** Vue Toastification
 
-## Project Setup
+## 📦 Project Setup
 
-```sh
+### Prerequisites
+
+- Node.js >= 14.x
+- npm or yarn
+
+### Install Dependencies
+
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+# or
+yarn install
