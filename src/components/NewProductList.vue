@@ -235,20 +235,24 @@ h1 {
 
 
 .modal button {
-  padding: 10px 20px;
-  margin-bottom: 30%;
-  font-size: 20px;
-  width: 100%;
-  background-color: #3498db;
+  background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
+    , #0073e6);
+  color: #032b53;
+  padding: 13px;
+  border-radius: 20px;
   border: none;
-  color: white;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.4s ease;
   cursor: pointer;
-  margin-top: 15px;
-  border-radius: 2px ;
+  color: #fff;
 }
 
 .modal button:hover {
-  background-color:  #2980b9;
+  color: #696c6e;
   }
 
 input:focus {

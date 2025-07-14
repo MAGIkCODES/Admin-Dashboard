@@ -86,20 +86,25 @@ input[type='number'] {
 }
 
 .btn {
-  cursor: pointer;
-  background-color: #3498db;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
+  background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
+    , #0073e6);
+  color: #032b53;
+  padding: 13px;
+  border-radius: 20px;
+  border: none;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 600;
   width: 100%;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  color: #fff;
+  
 }
 
 .btn:hover {
-  background-color:  #2980b9;
+  color: #696c6e;
 }
 
 .btn:focus,
